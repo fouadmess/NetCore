@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Copyright>2017, MESSAIA.NET, all Rights Reserved. Licensed under the Apache License, Version 2.0. without MESSAIA.NET's express consent</Copyright>
+    <Company>MESSAIA.NET</Company>
+    <Authors>Fouad Messaia</Authors>
+    <Description>MVC Library for .Net Core</Description>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="2.2.0-preview3-35497" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.0-preview3-35497" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0-preview3-35497" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Messaia.Net.Service\Messaia.Net.Service.csproj" />
+  </ItemGroup>
+
+</Project>

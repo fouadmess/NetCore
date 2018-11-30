@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Copyright>2017, MESSAIA.NET, all Rights Reserved. Licensed under the Apache License, Version 2.0. without MESSAIA.NET's express consent</Copyright>
+    <Description>Observable Library for .NET Core</Description>
+    <Company>MESSAIA.NET</Company>
+    <Authors>Fouad Messaia</Authors>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Messaia.Net.Common\Messaia.Net.Common.csproj" />
+    <ProjectReference Include="..\Messaia.Net.Observable\Messaia.Net.Observable.csproj" />
+  </ItemGroup>
+
+</Project>

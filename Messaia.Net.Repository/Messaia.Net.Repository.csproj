@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>Repository Library for .Net Core</Description>
+    <Authors>Fouad Messaia</Authors>
+    <Company>MESSAIA.NET</Company>
+    <Copyright>2017, MESSAIA.NET, all Rights Reserved. Licensed under the Apache License, Version 2.0. without MESSAIA.NET's express consent</Copyright>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Messaia.Net.Common\Messaia.Net.Common.csproj" />
+    <ProjectReference Include="..\Messaia.Net.Observable\Messaia.Net.Observable.csproj" />
+    <ProjectReference Include="..\Messaia.Net.Pagination\Messaia.Net.Pagination.csproj" />
+  </ItemGroup>
+
+</Project>

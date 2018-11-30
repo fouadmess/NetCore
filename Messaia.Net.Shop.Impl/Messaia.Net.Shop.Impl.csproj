@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Messaia.Net.Data\Messaia.Net.Data.csproj" />
+    <ProjectReference Include="..\Messaia.Net.Model\Messaia.Net.Model.csproj" />
+    <ProjectReference Include="..\Messaia.Net.Observable\Messaia.Net.Observable.csproj" />
+    <ProjectReference Include="..\Messaia.Net.Repository.Impl\Messaia.Net.Repository.Impl.csproj" />
+    <ProjectReference Include="..\Messaia.Net.Repository\Messaia.Net.Repository.csproj" />
+    <ProjectReference Include="..\Messaia.Net.Shop\Messaia.Net.Shop.csproj" />
+  </ItemGroup>
+
+</Project>

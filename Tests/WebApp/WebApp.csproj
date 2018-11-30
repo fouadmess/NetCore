@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <UserSecretsId>aspnet-WebApp-74C985DF-C696-49BD-8301-12B10740AA16</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" PrivateAssets="All" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.0.1" />
+    <PackageReference Include="Messaia.Net.Api" Version="2.0.0-beta24" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Messaia.Net.Http\Messaia.Net.Http.csproj" />
+    <ProjectReference Include="..\..\Messaia.Net.Identity\Messaia.Net.Identity.csproj" />
+    <ProjectReference Include="..\..\Messaia.Net.Repository.Impl\Messaia.Net.Repository.Impl.csproj" />
+    <ProjectReference Include="..\..\Messaia.Net.Security\Messaia.Net.Security.csproj" />
+    <ProjectReference Include="..\..\Messaia.Net.Service.Impl\Messaia.Net.Service.Impl.csproj" />
+  </ItemGroup>
+</Project>
