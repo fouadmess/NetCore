@@ -1,0 +1,5 @@
+D:\Projects\Web\Libraries\NetCore\Tests\Messaia.Net.Test\obj\Debug\net461\Messaia.Net.Test.csprojAssemblyReference.cache
+D:\Projects\Web\Libraries\NetCore\Tests\Messaia.Net.Test\obj\Debug\net461\Messaia.Net.Test.exe.config
+D:\Projects\Web\Libraries\NetCore\Tests\Messaia.Net.Test\obj\Debug\net461\Messaia.Net.Test.csproj.CoreCompileInputs.cache
+D:\Projects\Web\Libraries\NetCore\Tests\Messaia.Net.Test\obj\Debug\net461\Messaia.Net.Test.AssemblyInfoInputs.cache
+D:\Projects\Web\Libraries\NetCore\Tests\Messaia.Net.Test\obj\Debug\net461\Messaia.Net.Test.AssemblyInfo.cs
