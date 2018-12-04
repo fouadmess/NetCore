@@ -6,6 +6,7 @@ using ServiceTest.Services;
 using System;
 using System.Threading.Tasks;
 using Messaia.Net.Repository;
+using Messaia.Net.Http.Util;
 
 namespace ServiceTest
 {
@@ -41,6 +42,17 @@ namespace ServiceTest
             productService.Subscribe(provider.GetRequiredService<IProductObserver>());
 
             #region Temp
+
+            var auth = HttpHelper.AuthenticateAsync(new Authentication
+            {
+                AuthUrl = "http://localhost:5001",
+                UserName = "f.messaia@veritas-data.de",
+                Password = "FMP@ssw0rd",
+                ApiScope = "api",
+                AuthClient = "ro.client",
+                AuthSecret = "96d68320-2000-46ce-1d3d-3dc85b37e8b5",
+
+            }).GetAwaiter().GetResult();
 
             var productList = productService.GetListAsync(x => x.Id > 0).GetAwaiter().GetResult();
 

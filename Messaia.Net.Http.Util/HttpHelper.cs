@@ -10,6 +10,7 @@ namespace Messaia.Net.Http.Util
 {
     using IdentityModel.Client;
     using System;
+    using System.Net.Http;
     using System.Threading.Tasks;
 
     /// <summary>
@@ -43,20 +44,26 @@ namespace Messaia.Net.Http.Util
 
             try
             {
+                var client = new HttpClient();
+
                 /* Discover the identity server */
-                var discovery = await DiscoveryClient.GetAsync(authentication.AuthUrl);
+                var discovery = await client.GetDiscoveryDocumentAsync(authentication.AuthUrl);
                 if (discovery.IsError)
                 {
                     throw new AuthenticationException(discovery.Error);
                 }
 
-                /* Requests a token using the resource owner password credentials */
-                var tokenClient = new TokenClient(discovery.TokenEndpoint, authentication.AuthClient, authentication.AuthSecret);
-                var tokenResponse = await tokenClient.RequestResourceOwnerPasswordAsync(
-                    authentication.UserName,
-                    authentication.Password,
-                    authentication.ApiScope
-                );
+                /* Requesting a token using the password Grant Type */
+                var tokenResponse = await client.RequestPasswordTokenAsync(new PasswordTokenRequest
+                {
+                    Address = discovery.TokenEndpoint,
+                    GrantType = authentication.GrantType,
+                    ClientId = authentication.AuthClient,
+                    ClientSecret = authentication.AuthSecret,
+                    Scope = authentication.ApiScope,
+                    UserName = authentication.UserName,
+                    Password = authentication.Password
+                });
 
                 if (tokenResponse.IsError)
                 {
@@ -91,17 +98,24 @@ namespace Messaia.Net.Http.Util
 
             try
             {
-                /* Initializes a new instance of IntrospectionClient */
-                var introspectionClient = new IntrospectionClient(
-                    new Uri(new Uri(authentication.AuthUrl), "connect/introspect").ToString(),
-                    authentication.ApiScope,
-                    authentication.AuthSecret
-                );
+                var client = new HttpClient();
+
+                /* Send an OAuth token introspection request */
+                var response = await client.IntrospectTokenAsync(new TokenIntrospectionRequest
+                {
+                    Address = new Uri(new Uri(authentication.AuthUrl), "connect/introspect").ToString(),
+                    ClientId = authentication.AuthClient,
+                    ClientSecret = authentication.AuthSecret,
+                    Token = accessToken
+                });
+
+                if (response.IsError)
+                {
+                    throw new Exception(response.Error);
+                }
 
                 /* Check the access token */
-                var result = await introspectionClient.SendAsync(new IntrospectionRequest { Token = accessToken });
-
-                return !result.IsError && result.IsActive;
+                return !response.IsError && response.IsActive;
             }
             catch (Exception ex)
             {

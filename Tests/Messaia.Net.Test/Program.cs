@@ -82,29 +82,29 @@ namespace Messaia.Net.Test
                     .Callback(HandleCallback)
                 );
 
-                if (false)
-                {
-                    mailService.SendAsync(new MailBuilder()
-                        .To("fouad.messaia@gmail.com")
-                        .Bcc("fouadmess@gmail.com")
-                        .Priority(MailPriority.Low)
-                        .Subject("My Subject2")
-                        .Body(@"<html><body><h1 style=""color: red"">Hurraa 2</h1><body></html>")
-                        //.Attachment(@"D:\Temp\Report.pdf")
-                        .Attachment(attachment)
-                        .Callback(HandleCallback)
-                    );
+                //if (false)
+                //{
+                //    mailService.SendAsync(new MailBuilder()
+                //        .To("fouad.messaia@gmail.com")
+                //        .Bcc("fouadmess@gmail.com")
+                //        .Priority(MailPriority.Low)
+                //        .Subject("My Subject2")
+                //        .Body(@"<html><body><h1 style=""color: red"">Hurraa 2</h1><body></html>")
+                //        //.Attachment(@"D:\Temp\Report.pdf")
+                //        .Attachment(attachment)
+                //        .Callback(HandleCallback)
+                //    );
 
-                    mailService.SendAsync(new MailBuilder()
-                        .To("fouad.messaia@gmail.com")
-                        //.To("fouadmess@gmail.com")
-                        .Subject("My Subject3")
-                        .Body(@"<html><body><h1 style=""color: red"">Hurraa 3</h1><body></html>")
-                        //.Attachment(@"D:\Temp\Report.pdf")
-                        .Attachment(attachment)
-                        .Callback(HandleCallback)
-                    );
-                }
+                //    mailService.SendAsync(new MailBuilder()
+                //        .To("fouad.messaia@gmail.com")
+                //        //.To("fouadmess@gmail.com")
+                //        .Subject("My Subject3")
+                //        .Body(@"<html><body><h1 style=""color: red"">Hurraa 3</h1><body></html>")
+                //        //.Attachment(@"D:\Temp\Report.pdf")
+                //        .Attachment(attachment)
+                //        .Callback(HandleCallback)
+                //    );
+                //}
             }
             catch (Exception ex)
             {

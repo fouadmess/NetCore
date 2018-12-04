@@ -14,9 +14,9 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MESSAIA.NET")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("2017, MESSAIA.NET, all Rights Reserved. Licensed under the Apache License, Versio" +
-    "n 2.0. without MESSAIA.NET\'s express consent")]
+    "n 2.0. See the LICENSE file in the project root for more information.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("2.2.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.2.0-beta07")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.2.0-preview1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Messaia.Net.Test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Messaia.Net.Test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("2.2.0.0")]

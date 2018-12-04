@@ -33,3 +33,5 @@ D:\Projects\Web\Libraries\NetCore\Tests\ServiceTest\bin\Debug\netcoreapp2.1\Mess
 D:\Projects\Web\Libraries\NetCore\Tests\ServiceTest\obj\Debug\netcoreapp2.1\ServiceTest.csproj.CopyComplete
 D:\Projects\Web\Libraries\NetCore\Tests\ServiceTest\obj\Debug\netcoreapp2.1\ServiceTest.dll
 D:\Projects\Web\Libraries\NetCore\Tests\ServiceTest\obj\Debug\netcoreapp2.1\ServiceTest.pdb
+D:\Projects\Web\Libraries\NetCore\Tests\ServiceTest\bin\Debug\netcoreapp2.1\Messaia.Net.Http.Util.dll
+D:\Projects\Web\Libraries\NetCore\Tests\ServiceTest\bin\Debug\netcoreapp2.1\Messaia.Net.Http.Util.pdb

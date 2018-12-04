@@ -7,16 +7,17 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Messaia.Net.Data.Extensions\Messaia.Net.Data.Extensions.csproj" />
     <ProjectReference Include="..\..\Messaia.Net.Data\Messaia.Net.Data.csproj" />
+    <ProjectReference Include="..\..\Messaia.Net.Http.Util\Messaia.Net.Http.Util.csproj" />
     <ProjectReference Include="..\..\Messaia.Net.Model\Messaia.Net.Model.csproj" />
     <ProjectReference Include="..\..\Messaia.Net.Repository.Impl\Messaia.Net.Repository.Impl.csproj" />
     <ProjectReference Include="..\..\Messaia.Net.Service.Impl\Messaia.Net.Service.Impl.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.0-preview3-35497" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0-preview3-35497" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.2.0-preview3-35497" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0-preview3-35497" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.2.0-preview1" />
   </ItemGroup>
 

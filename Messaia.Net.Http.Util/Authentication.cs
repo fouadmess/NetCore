@@ -8,6 +8,8 @@
 ///-----------------------------------------------------------------
 namespace Messaia.Net.Http.Util
 {
+    using System.Collections.Generic;
+
     /// <summary>
     /// Authentication class.
     /// </summary>
@@ -34,6 +36,11 @@ namespace Messaia.Net.Http.Util
         public string ApiScope { get; set; }
 
         /// <summary>
+        /// Gets or sets the GrantType
+        /// </summary>
+        public string GrantType { get; set; }
+
+        /// <summary>
         /// Gets or sets the UserName
         /// </summary>
         public string UserName { get; set; }
@@ -42,5 +49,10 @@ namespace Messaia.Net.Http.Util
         /// Gets or sets the Password
         /// </summary>
         public string Password { get; set; }
+
+        /// <summary>
+        /// Gets or sets the Parameters
+        /// </summary>
+        public IDictionary<string, string> Parameters { get; set; }
     }
 }
