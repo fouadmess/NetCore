@@ -63,17 +63,17 @@ namespace Messaia.Net.Test
         {
             var mailService = provider.GetService<IMailService>();
 
-            //mailService.SendAsync(new string[] { "fouad.messaia@gmail.com", "fouadmess@gmail.com" }, "Subject", "Body");
+            //mailService.SendAsync(new string[] { "...", "..." }, "Subject", "Body");
 
-            var message = new MailMessage("fouad.messaia@gmail.com", "fouadmess@gmail.com", "Mail als Anhang mit Anhang", "Bodyyyyyyyyy");
+            var message = new MailMessage("...", "...", "Mail als Anhang mit Anhang", "Bodyyyyyyyyy");
             //message.Attachments.Add(new Attachment(@"D:\Temp\1.pdf"));
             var attachment = message.ToAttachment();
 
             try
             {
                 mailService.SendAsync(new MailBuilder()
-                    .To("fouad.messaia@gmail.com")
-                    .Cc("fouadmess@gmail.com")
+                    .To("...")
+                    .Cc("...")
                     .Priority(MailPriority.High)
                     .Subject("Über")
                     .Body(@"<html><body><h1 style=""color: red"">Hurraa 1</h1><body></html>")
@@ -85,8 +85,8 @@ namespace Messaia.Net.Test
                 //if (false)
                 //{
                 //    mailService.SendAsync(new MailBuilder()
-                //        .To("fouad.messaia@gmail.com")
-                //        .Bcc("fouadmess@gmail.com")
+                //        .To("...")
+                //        .Bcc("...")
                 //        .Priority(MailPriority.Low)
                 //        .Subject("My Subject2")
                 //        .Body(@"<html><body><h1 style=""color: red"">Hurraa 2</h1><body></html>")
@@ -96,8 +96,8 @@ namespace Messaia.Net.Test
                 //    );
 
                 //    mailService.SendAsync(new MailBuilder()
-                //        .To("fouad.messaia@gmail.com")
-                //        //.To("fouadmess@gmail.com")
+                //        .To("...")
+                //        //.To("...")
                 //        .Subject("My Subject3")
                 //        .Body(@"<html><body><h1 style=""color: red"">Hurraa 3</h1><body></html>")
                 //        //.Attachment(@"D:\Temp\Report.pdf")

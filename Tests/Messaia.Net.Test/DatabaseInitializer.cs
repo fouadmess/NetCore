@@ -135,7 +135,7 @@ namespace Messaia.Net.Test
             #region Add Admins
 
             /* Admin */
-            var adminEmail = "f.messaia@veritas-data.de";
+            var adminEmail = "fake@mail.com";
             this.UserManager?.CreateAsync(new User
             {
                 Email = adminEmail,
@@ -155,53 +155,11 @@ namespace Messaia.Net.Test
                 }
             }, "P@ssw0rd").GetAwaiter().GetResult();
 
-            var admin2Email = "info@veritas-data.de";
-            this.UserManager?.CreateAsync(new User
-            {
-                Email = admin2Email,
-                UserName = admin2Email,
-                EmailConfirmed = true,
-                Enabled = true,
-                Salutation = Salutation.Male,
-                FirstName = "Veritas",
-                LastName = "Admin",
-                PhoneNumber = "0123456789012",
-                Address = new Address
-                {
-                    Address1 = "Bunsenstr.",
-                    Address2 = "2a",
-                    PostalCode = "64293",
-                    City = "Darmstadt"
-                }
-            }, "P@ssw0rd").GetAwaiter().GetResult();
-
-            var dataTypistEmail = "datatypist@example.com";
-            this.UserManager?.CreateAsync(new User
-            {
-                Email = dataTypistEmail,
-                UserName = dataTypistEmail,
-                EmailConfirmed = true,
-                Enabled = true,
-                Salutation = Salutation.Male,
-                FirstName = "Data",
-                LastName = "Typist",
-                PhoneNumber = "0123456789012",
-                Address = new Address
-                {
-                    Address1 = "Bunsenstr.",
-                    Address2 = "2a",
-                    PostalCode = "64293",
-                    City = "Darmstadt"
-                }
-            }, "P@ssw0rd").GetAwaiter().GetResult();
-
             #endregion
 
             #region Add Users to Roles
 
             this.AddUserToRoles(adminEmail, "Administrator");
-            this.AddUserToRoles(admin2Email, "CEO");
-            this.AddUserToRoles(dataTypistEmail, "DataTypist");
 
             #endregion
         }

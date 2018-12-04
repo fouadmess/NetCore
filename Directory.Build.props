@@ -1,10 +1,10 @@
 <Project>
   <PropertyGroup>
-    <Copyright>2017, MESSAIA.NET, all Rights Reserved. Licensed under the Apache License, Version 2.0. without MESSAIA.NET's express consent</Copyright>
+    <Copyright>2017, MESSAIA.NET, all Rights Reserved. Licensed under the Apache License, Version 2.0. See the LICENSE file in the project root for more information.</Copyright>
     <Company>MESSAIA.NET</Company>
     <Authors>Fouad Messaia</Authors>
     <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
-    <Version>2.2.0-preview2</Version>
+    <Version>2.2.0</Version>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
     <FileVersion>2.2.0.0</FileVersion>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
