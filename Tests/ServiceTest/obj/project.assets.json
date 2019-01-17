@@ -2859,7 +2859,7 @@
       ]
     },
     "System.Collections.Immutable/1.5.0": {
-      "sha512": "RGxi2aQoXgZ5ge0zxrKqI4PU9LrYYoLC+cnEnWXKsSduCOUhE1GEAAoTexUVT8RZOILQyy1B27HC8Xw/XLGzdQ==",
+      "sha512": "EXKiDFsChZW0RjrZ4FYHu9aW6+P4MCgEDCklsVseRfhoO0F+dXeMSsMRAlVXIo06kGJ/zv+2w1a2uc2+kxxSaQ==",
       "type": "package",
       "path": "system.collections.immutable/1.5.0",
       "files": [
@@ -4210,7 +4210,7 @@
       ]
     },
     "System.Runtime.CompilerServices.Unsafe/4.5.1": {
-      "sha512": "qUJMNWhbm9oZ3XaMFiEMiYmRPszbnXIkRIi7+4b2Md2xZ6JUOepf0/kY3S85qistRohl9OdMe4PsO+RdG2kTIQ==",
+      "sha512": "x/3d5xb+mc9e4I2GOOT+HPRWMZLbYjNN/kYKsb0fyUKcWizn/t1CIrGRLIBhv7H0ptYEt+WTTztdPmwSUMyKig==",
       "type": "package",
       "path": "system.runtime.compilerservices.unsafe/4.5.1",
       "files": [
@@ -4542,10 +4542,11 @@
       ]
     },
     "System.Text.Encodings.Web/4.5.0": {
-      "sha512": "JF+wDdfFiRl3rz3dPMfR6aR568AW2J5CUMmhSflgHDz4zbVK4/00ax8UHnHyEMvblPewgNugjuA4oyoL8Pex2g==",
+      "sha512": "Xg4G4Indi4dqP1iuAiMSwpiWS54ZghzR644OtsRCm/m/lBMG8dUBhLVN7hLm8NNrNTR+iGbshCPTwrvxZPlm4g==",
       "type": "package",
       "path": "system.text.encodings.web/4.5.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -4736,7 +4737,7 @@
       ]
     },
     "System.ValueTuple/4.5.0": {
-      "sha512": "xZtSZNEHGa+tGsKuP4sh257vxJ/yemShz4EusmomkynMzuEDDjVaErBNewpzEF6swUgbcrSQAX3ELsEp1zCOwA==",
+      "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
       "type": "package",
       "path": "system.valuetuple/4.5.0",
       "files": [
@@ -4863,11 +4864,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\Web\\Libraries\\NetCore\\Tests\\ServiceTest\\ServiceTest.csproj",
+      "projectUniqueName": "D:\\Projects\\Web\\Libraries\\Messaia\\C#\\NetCore\\Tests\\ServiceTest\\ServiceTest.csproj",
       "projectName": "ServiceTest",
-      "projectPath": "D:\\Projects\\Web\\Libraries\\NetCore\\Tests\\ServiceTest\\ServiceTest.csproj",
+      "projectPath": "D:\\Projects\\Web\\Libraries\\Messaia\\C#\\NetCore\\Tests\\ServiceTest\\ServiceTest.csproj",
       "packagesPath": "C:\\Users\\fouad\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\Web\\Libraries\\NetCore\\Tests\\ServiceTest\\obj\\",
+      "outputPath": "D:\\Projects\\Web\\Libraries\\Messaia\\C#\\NetCore\\Tests\\ServiceTest\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
@@ -4889,23 +4890,23 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "D:\\Projects\\Web\\Libraries\\NetCore\\Messaia.Net.Data.Extensions\\Messaia.Net.Data.Extensions.csproj": {
-              "projectPath": "D:\\Projects\\Web\\Libraries\\NetCore\\Messaia.Net.Data.Extensions\\Messaia.Net.Data.Extensions.csproj"
+            "D:\\Projects\\Web\\Libraries\\Messaia\\C#\\NetCore\\Messaia.Net.Data.Extensions\\Messaia.Net.Data.Extensions.csproj": {
+              "projectPath": "D:\\Projects\\Web\\Libraries\\Messaia\\C#\\NetCore\\Messaia.Net.Data.Extensions\\Messaia.Net.Data.Extensions.csproj"
             },
-            "D:\\Projects\\Web\\Libraries\\NetCore\\Messaia.Net.Data\\Messaia.Net.Data.csproj": {
-              "projectPath": "D:\\Projects\\Web\\Libraries\\NetCore\\Messaia.Net.Data\\Messaia.Net.Data.csproj"
+            "D:\\Projects\\Web\\Libraries\\Messaia\\C#\\NetCore\\Messaia.Net.Data\\Messaia.Net.Data.csproj": {
+              "projectPath": "D:\\Projects\\Web\\Libraries\\Messaia\\C#\\NetCore\\Messaia.Net.Data\\Messaia.Net.Data.csproj"
             },
-            "D:\\Projects\\Web\\Libraries\\NetCore\\Messaia.Net.Http.Util\\Messaia.Net.Http.Util.csproj": {
-              "projectPath": "D:\\Projects\\Web\\Libraries\\NetCore\\Messaia.Net.Http.Util\\Messaia.Net.Http.Util.csproj"
+            "D:\\Projects\\Web\\Libraries\\Messaia\\C#\\NetCore\\Messaia.Net.Http.Util\\Messaia.Net.Http.Util.csproj": {
+              "projectPath": "D:\\Projects\\Web\\Libraries\\Messaia\\C#\\NetCore\\Messaia.Net.Http.Util\\Messaia.Net.Http.Util.csproj"
             },
-            "D:\\Projects\\Web\\Libraries\\NetCore\\Messaia.Net.Model\\Messaia.Net.Model.csproj": {
-              "projectPath": "D:\\Projects\\Web\\Libraries\\NetCore\\Messaia.Net.Model\\Messaia.Net.Model.csproj"
+            "D:\\Projects\\Web\\Libraries\\Messaia\\C#\\NetCore\\Messaia.Net.Model\\Messaia.Net.Model.csproj": {
+              "projectPath": "D:\\Projects\\Web\\Libraries\\Messaia\\C#\\NetCore\\Messaia.Net.Model\\Messaia.Net.Model.csproj"
             },
-            "D:\\Projects\\Web\\Libraries\\NetCore\\Messaia.Net.Repository.Impl\\Messaia.Net.Repository.Impl.csproj": {
-              "projectPath": "D:\\Projects\\Web\\Libraries\\NetCore\\Messaia.Net.Repository.Impl\\Messaia.Net.Repository.Impl.csproj"
+            "D:\\Projects\\Web\\Libraries\\Messaia\\C#\\NetCore\\Messaia.Net.Repository.Impl\\Messaia.Net.Repository.Impl.csproj": {
+              "projectPath": "D:\\Projects\\Web\\Libraries\\Messaia\\C#\\NetCore\\Messaia.Net.Repository.Impl\\Messaia.Net.Repository.Impl.csproj"
             },
-            "D:\\Projects\\Web\\Libraries\\NetCore\\Messaia.Net.Service.Impl\\Messaia.Net.Service.Impl.csproj": {
-              "projectPath": "D:\\Projects\\Web\\Libraries\\NetCore\\Messaia.Net.Service.Impl\\Messaia.Net.Service.Impl.csproj"
+            "D:\\Projects\\Web\\Libraries\\Messaia\\C#\\NetCore\\Messaia.Net.Service.Impl\\Messaia.Net.Service.Impl.csproj": {
+              "projectPath": "D:\\Projects\\Web\\Libraries\\Messaia\\C#\\NetCore\\Messaia.Net.Service.Impl\\Messaia.Net.Service.Impl.csproj"
             }
           }
         }
