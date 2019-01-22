@@ -25,6 +25,11 @@ namespace Messaia.Net.Identity
         private string _displayName;
 
         /// <summary>
+        /// Gets or sets the ExternalId
+        /// </summary>
+        public string ExternalId { get; set; }
+
+        /// <summary>
         /// Gets or sets the Salutation
         /// </summary>
         public virtual Salutation Salutation { get; set; }
