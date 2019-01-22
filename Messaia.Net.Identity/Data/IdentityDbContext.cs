@@ -68,7 +68,7 @@ namespace Messaia.Net.Identity
             {
                 b.HasMany(r => r.Roles).WithOne(x => x.User).HasForeignKey(ur => ur.UserId).IsRequired();
                 b.OwnsOne(x => x.Address).Ignore(x => x.Id).ToTable($"{nameof(User)}{nameof(User.Address)}es");
-                b.HasAlternateKey(x => x.ExternalId);
+                b.HasIndex(x => x.ExternalId).IsUnique();
             });
 
             /* Role */
