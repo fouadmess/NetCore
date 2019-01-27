@@ -373,11 +373,11 @@
           "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore/2.2.0": {
+      "Microsoft.EntityFrameworkCore/2.2.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Abstractions": "2.2.0",
-          "Microsoft.EntityFrameworkCore.Analyzers": "2.2.0",
+          "Microsoft.EntityFrameworkCore.Abstractions": "2.2.1",
+          "Microsoft.EntityFrameworkCore.Analyzers": "2.2.1",
           "Microsoft.Extensions.Caching.Memory": "2.2.0",
           "Microsoft.Extensions.DependencyInjection": "2.2.0",
           "Microsoft.Extensions.Logging": "2.2.0",
@@ -394,7 +394,7 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Abstractions/2.2.0": {
+      "Microsoft.EntityFrameworkCore.Abstractions/2.2.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {}
@@ -403,13 +403,13 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/2.2.0": {
+      "Microsoft.EntityFrameworkCore.Analyzers/2.2.1": {
         "type": "package"
       },
-      "Microsoft.EntityFrameworkCore.Relational/2.2.0": {
+      "Microsoft.EntityFrameworkCore.Relational/2.2.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "2.2.0"
+          "Microsoft.EntityFrameworkCore": "2.2.1"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.dll": {}
@@ -418,10 +418,10 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.SqlServer/2.2.0": {
+      "Microsoft.EntityFrameworkCore.SqlServer/2.2.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "2.2.0",
+          "Microsoft.EntityFrameworkCore.Relational": "2.2.1",
           "System.Data.SqlClient": "4.6.0"
         },
         "compile": {
@@ -1294,7 +1294,7 @@
           "lib/netstandard1.6/System.Linq.dll": {}
         }
       },
-      "System.Linq.Dynamic.Core/1.0.9": {
+      "System.Linq.Dynamic.Core/1.0.9.2": {
         "type": "package",
         "dependencies": {
           "System.Reflection.Emit": "4.3.0"
@@ -1736,7 +1736,7 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
-      "Messaia.Net.Common/2.2.2": {
+      "Messaia.Net.Common/2.2.3": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
@@ -1746,7 +1746,7 @@
           "bin/placeholder/Messaia.Net.Common.dll": {}
         }
       },
-      "Messaia.Net.Data/2.2.2": {
+      "Messaia.Net.Data/2.2.3": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
@@ -1756,12 +1756,12 @@
           "bin/placeholder/Messaia.Net.Data.dll": {}
         }
       },
-      "Messaia.Net.Data.Extensions/2.2.2": {
+      "Messaia.Net.Data.Extensions/2.2.3": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Messaia.Net.Common": "2.2.2",
-          "Microsoft.EntityFrameworkCore": "2.2.0"
+          "Messaia.Net.Common": "2.2.3",
+          "Microsoft.EntityFrameworkCore": "2.2.1"
         },
         "compile": {
           "bin/placeholder/Messaia.Net.Data.Extensions.dll": {}
@@ -1770,12 +1770,12 @@
           "bin/placeholder/Messaia.Net.Data.Extensions.dll": {}
         }
       },
-      "Messaia.Net.Identity/2.2.2": {
+      "Messaia.Net.Identity/2.2.3": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Messaia.Net.Data": "2.2.2",
-          "Messaia.Net.Model": "2.2.2",
+          "Messaia.Net.Data": "2.2.3",
+          "Messaia.Net.Model": "2.2.3",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
           "Microsoft.Extensions.Configuration.Binder": "2.2.0"
         },
@@ -1786,7 +1786,7 @@
           "bin/placeholder/Messaia.Net.Identity.dll": {}
         }
       },
-      "Messaia.Net.MailService/2.2.2": {
+      "Messaia.Net.MailService/2.2.3": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -1800,7 +1800,7 @@
           "bin/placeholder/Messaia.Net.MailService.dll": {}
         }
       },
-      "Messaia.Net.Model/2.2.2": {
+      "Messaia.Net.Model/2.2.3": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -1813,11 +1813,11 @@
           "bin/placeholder/Messaia.Net.Model.dll": {}
         }
       },
-      "Messaia.Net.Observable/2.2.2": {
+      "Messaia.Net.Observable/2.2.3": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Messaia.Net.Common": "2.2.2"
+          "Messaia.Net.Common": "2.2.3"
         },
         "compile": {
           "bin/placeholder/Messaia.Net.Observable.dll": {}
@@ -1826,12 +1826,12 @@
           "bin/placeholder/Messaia.Net.Observable.dll": {}
         }
       },
-      "Messaia.Net.Observable.Impl/2.2.2": {
+      "Messaia.Net.Observable.Impl/2.2.3": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Messaia.Net.Common": "2.2.2",
-          "Messaia.Net.Observable": "2.2.2"
+          "Messaia.Net.Common": "2.2.3",
+          "Messaia.Net.Observable": "2.2.3"
         },
         "compile": {
           "bin/placeholder/Messaia.Net.Observable.Impl.dll": {}
@@ -1840,7 +1840,7 @@
           "bin/placeholder/Messaia.Net.Observable.Impl.dll": {}
         }
       },
-      "Messaia.Net.Pagination/2.2.2": {
+      "Messaia.Net.Pagination/2.2.3": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
@@ -1850,13 +1850,13 @@
           "bin/placeholder/Messaia.Net.Pagination.dll": {}
         }
       },
-      "Messaia.Net.Repository/2.2.2": {
+      "Messaia.Net.Repository/2.2.3": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Messaia.Net.Common": "2.2.2",
-          "Messaia.Net.Observable": "2.2.2",
-          "Messaia.Net.Pagination": "2.2.2"
+          "Messaia.Net.Common": "2.2.3",
+          "Messaia.Net.Observable": "2.2.3",
+          "Messaia.Net.Pagination": "2.2.3"
         },
         "compile": {
           "bin/placeholder/Messaia.Net.Repository.dll": {}
@@ -1865,18 +1865,18 @@
           "bin/placeholder/Messaia.Net.Repository.dll": {}
         }
       },
-      "Messaia.Net.Repository.Impl/2.2.2": {
+      "Messaia.Net.Repository.Impl/2.2.3": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Messaia.Net.Data": "2.2.2",
-          "Messaia.Net.Data.Extensions": "2.2.2",
-          "Messaia.Net.Model": "2.2.2",
-          "Messaia.Net.Observable.Impl": "2.2.2",
-          "Messaia.Net.Repository": "2.2.2",
-          "Microsoft.EntityFrameworkCore": "2.2.0",
-          "Microsoft.EntityFrameworkCore.Relational": "2.2.0",
-          "System.Linq.Dynamic.Core": "1.0.9"
+          "Messaia.Net.Data": "2.2.3",
+          "Messaia.Net.Data.Extensions": "2.2.3",
+          "Messaia.Net.Model": "2.2.3",
+          "Messaia.Net.Observable.Impl": "2.2.3",
+          "Messaia.Net.Repository": "2.2.3",
+          "Microsoft.EntityFrameworkCore": "2.2.1",
+          "Microsoft.EntityFrameworkCore.Relational": "2.2.1",
+          "System.Linq.Dynamic.Core": "1.0.9.2"
         },
         "compile": {
           "bin/placeholder/Messaia.Net.Repository.Impl.dll": {}
@@ -1885,12 +1885,12 @@
           "bin/placeholder/Messaia.Net.Repository.Impl.dll": {}
         }
       },
-      "Messaia.Net.Service/2.2.2": {
+      "Messaia.Net.Service/2.2.3": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Messaia.Net.Model": "2.2.2",
-          "Messaia.Net.Repository": "2.2.2"
+          "Messaia.Net.Model": "2.2.3",
+          "Messaia.Net.Repository": "2.2.3"
         },
         "compile": {
           "bin/placeholder/Messaia.Net.Service.dll": {}
@@ -1899,13 +1899,13 @@
           "bin/placeholder/Messaia.Net.Service.dll": {}
         }
       },
-      "Messaia.Net.Service.Impl/2.2.2": {
+      "Messaia.Net.Service.Impl/2.2.3": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Messaia.Net.Common": "2.2.2",
-          "Messaia.Net.Observable.Impl": "2.2.2",
-          "Messaia.Net.Service": "2.2.2"
+          "Messaia.Net.Common": "2.2.3",
+          "Messaia.Net.Observable.Impl": "2.2.3",
+          "Messaia.Net.Service": "2.2.3"
         },
         "compile": {
           "bin/placeholder/Messaia.Net.Service.Impl.dll": {}
@@ -2261,67 +2261,67 @@
         "microsoft.dotnet.platformabstractions.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore/2.2.0": {
-      "sha512": "sShQ1XMPv3HS6UJjtUs8AsZ1hEFUzwRpeRP9uavrfkaoWGOXwe4Klt131A+i9+/drnzbbEdzrhFkUiMWbzc4cg==",
+    "Microsoft.EntityFrameworkCore/2.2.1": {
+      "sha512": "NPLUN0CjvxirJYcsXdmxQKUKxKGlRikTYk3DYJZN2EZmfvtqgyphwe2wDM6rii8DAIJG/Yb5NeMapkT+eHGrLA==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore/2.2.0",
+      "path": "microsoft.entityframeworkcore/2.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.dll",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.xml",
-        "microsoft.entityframeworkcore.2.2.0.nupkg.sha512",
+        "microsoft.entityframeworkcore.2.2.1.nupkg.sha512",
         "microsoft.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Abstractions/2.2.0": {
-      "sha512": "aBDhI9ltp7m4BaoH7LhH1p/DiO95rpAgDD09JX3W9VAmEgTaamXzlbc1W6BhQhs9ScMDbi5HoJw+LQCAVUfV9w==",
+    "Microsoft.EntityFrameworkCore.Abstractions/2.2.1": {
+      "sha512": "ps+DT7pm2v/hp+fL1IFFOO/IcklhvRpWJhEfnVG5SOKHQkCAMmm6bOKiBPMvf34AyjJE57REUFsyqJxl/j7g+w==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.abstractions/2.2.0",
+      "path": "microsoft.entityframeworkcore.abstractions/2.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Abstractions.xml",
-        "microsoft.entityframeworkcore.abstractions.2.2.0.nupkg.sha512",
+        "microsoft.entityframeworkcore.abstractions.2.2.1.nupkg.sha512",
         "microsoft.entityframeworkcore.abstractions.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Analyzers/2.2.0": {
-      "sha512": "DYK/p3Fn7gz8bg8UelTRyJ9aH+i4bAQxeQ5YJTgCkNeTnyftHlw0ru1wZ/tUFlM27Cq2u5EYbvWBpefPo0izuw==",
+    "Microsoft.EntityFrameworkCore.Analyzers/2.2.1": {
+      "sha512": "4gmeUeD1WFCXJLelSTRmS0O0ozYSPzUsectv6lLfhiCtS7AIIk1MBsRZzSrHiVzOv7b+ksLn76mmM0rG1f1kFg==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.analyzers/2.2.0",
+      "path": "microsoft.entityframeworkcore.analyzers/2.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "analyzers/dotnet/cs/Microsoft.EntityFrameworkCore.Analyzers.dll",
-        "microsoft.entityframeworkcore.analyzers.2.2.0.nupkg.sha512",
+        "microsoft.entityframeworkcore.analyzers.2.2.1.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Relational/2.2.0": {
-      "sha512": "JCmBWVP5ZJGC4eKQg2GYJs0W9RMQdSZ6jsWh9zZk2fuxpGJuVKTFy4eFAHq9dgKu7N07IW+CPkNBA8LthS3q0A==",
+    "Microsoft.EntityFrameworkCore.Relational/2.2.1": {
+      "sha512": "vVTwPmR6671ykE2nAWCPgeADLVVradKPF3Apl9aP8fu0hPLddWIhkDH5ghL/EdvMQdIMqR3ccRJ+E8MQPLjutg==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.relational/2.2.0",
+      "path": "microsoft.entityframeworkcore.relational/2.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.dll",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.xml",
-        "microsoft.entityframeworkcore.relational.2.2.0.nupkg.sha512",
+        "microsoft.entityframeworkcore.relational.2.2.1.nupkg.sha512",
         "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.SqlServer/2.2.0": {
-      "sha512": "6wGv0oqusLfjfznd9hpbkeKs5vNYJ9UDyFMj+u2cHyZZZOKcGhtANXFqS5JusDWQmYfkX3tDZSRFIr+3zdCU8Q==",
+    "Microsoft.EntityFrameworkCore.SqlServer/2.2.1": {
+      "sha512": "gNd/3tkmTgUvyItVvWHbioHMuzK6kEZpqWzZU/7cS+OiydzPGGks//s5BlJWLfWPX5DmbN/uweu0Yr5EpY4sFA==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.sqlserver/2.2.0",
+      "path": "microsoft.entityframeworkcore.sqlserver/2.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.xml",
-        "microsoft.entityframeworkcore.sqlserver.2.2.0.nupkg.sha512",
+        "microsoft.entityframeworkcore.sqlserver.2.2.1.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlserver.nuspec"
       ]
     },
@@ -4143,29 +4143,36 @@
         "system.linq.nuspec"
       ]
     },
-    "System.Linq.Dynamic.Core/1.0.9": {
-      "sha512": "I0r3JnfbgfOJtdh1TzhJWC/FOvZ+NRr0KfXK7L7AAO+1Pb7YNNWceqN3OC0/BXbBmLBjvqOq2rqrDJqfmtGzww==",
+    "System.Linq.Dynamic.Core/1.0.9.2": {
+      "sha512": "HBNdfZYBF54qfHPdHVe3MgEOtKzhdJkQ0++R3OXg0b6HBJZkPkTt1a5Xg3V3qSlxXEa0moXJi/GIHiEYpUSIzg==",
       "type": "package",
-      "path": "system.linq.dynamic.core/1.0.9",
+      "path": "system.linq.dynamic.core/1.0.9.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net35/System.Linq.Dynamic.Core.dll",
+        "lib/net35/System.Linq.Dynamic.Core.pdb",
         "lib/net35/System.Linq.Dynamic.Core.xml",
         "lib/net40/System.Linq.Dynamic.Core.dll",
+        "lib/net40/System.Linq.Dynamic.Core.pdb",
         "lib/net40/System.Linq.Dynamic.Core.xml",
         "lib/net45/System.Linq.Dynamic.Core.dll",
+        "lib/net45/System.Linq.Dynamic.Core.pdb",
         "lib/net45/System.Linq.Dynamic.Core.xml",
         "lib/net46/System.Linq.Dynamic.Core.dll",
+        "lib/net46/System.Linq.Dynamic.Core.pdb",
         "lib/net46/System.Linq.Dynamic.Core.xml",
         "lib/netstandard1.3/System.Linq.Dynamic.Core.dll",
+        "lib/netstandard1.3/System.Linq.Dynamic.Core.pdb",
         "lib/netstandard1.3/System.Linq.Dynamic.Core.xml",
         "lib/netstandard2.0/System.Linq.Dynamic.Core.dll",
+        "lib/netstandard2.0/System.Linq.Dynamic.Core.pdb",
         "lib/netstandard2.0/System.Linq.Dynamic.Core.xml",
         "lib/uap10.0/System.Linq.Dynamic.Core.dll",
+        "lib/uap10.0/System.Linq.Dynamic.Core.pdb",
         "lib/uap10.0/System.Linq.Dynamic.Core.pri",
         "lib/uap10.0/System.Linq.Dynamic.Core.xml",
-        "system.linq.dynamic.core.1.0.9.nupkg.sha512",
+        "system.linq.dynamic.core.1.0.9.2.nupkg.sha512",
         "system.linq.dynamic.core.nuspec"
       ]
     },
@@ -5707,67 +5714,67 @@
         "version.txt"
       ]
     },
-    "Messaia.Net.Common/2.2.2": {
+    "Messaia.Net.Common/2.2.3": {
       "type": "project",
       "path": "../../Messaia.Net.Common/Messaia.Net.Common.csproj",
       "msbuildProject": "../../Messaia.Net.Common/Messaia.Net.Common.csproj"
     },
-    "Messaia.Net.Data/2.2.2": {
+    "Messaia.Net.Data/2.2.3": {
       "type": "project",
       "path": "../../Messaia.Net.Data/Messaia.Net.Data.csproj",
       "msbuildProject": "../../Messaia.Net.Data/Messaia.Net.Data.csproj"
     },
-    "Messaia.Net.Data.Extensions/2.2.2": {
+    "Messaia.Net.Data.Extensions/2.2.3": {
       "type": "project",
       "path": "../../Messaia.Net.Data.Extensions/Messaia.Net.Data.Extensions.csproj",
       "msbuildProject": "../../Messaia.Net.Data.Extensions/Messaia.Net.Data.Extensions.csproj"
     },
-    "Messaia.Net.Identity/2.2.2": {
+    "Messaia.Net.Identity/2.2.3": {
       "type": "project",
       "path": "../../Messaia.Net.Identity/Messaia.Net.Identity.csproj",
       "msbuildProject": "../../Messaia.Net.Identity/Messaia.Net.Identity.csproj"
     },
-    "Messaia.Net.MailService/2.2.2": {
+    "Messaia.Net.MailService/2.2.3": {
       "type": "project",
       "path": "../../Messaia.Net.MailService/Messaia.Net.MailService.csproj",
       "msbuildProject": "../../Messaia.Net.MailService/Messaia.Net.MailService.csproj"
     },
-    "Messaia.Net.Model/2.2.2": {
+    "Messaia.Net.Model/2.2.3": {
       "type": "project",
       "path": "../../Messaia.Net.Model/Messaia.Net.Model.csproj",
       "msbuildProject": "../../Messaia.Net.Model/Messaia.Net.Model.csproj"
     },
-    "Messaia.Net.Observable/2.2.2": {
+    "Messaia.Net.Observable/2.2.3": {
       "type": "project",
       "path": "../../Messaia.Net.Observable/Messaia.Net.Observable.csproj",
       "msbuildProject": "../../Messaia.Net.Observable/Messaia.Net.Observable.csproj"
     },
-    "Messaia.Net.Observable.Impl/2.2.2": {
+    "Messaia.Net.Observable.Impl/2.2.3": {
       "type": "project",
       "path": "../../Messaia.Net.Observable.Impl/Messaia.Net.Observable.Impl.csproj",
       "msbuildProject": "../../Messaia.Net.Observable.Impl/Messaia.Net.Observable.Impl.csproj"
     },
-    "Messaia.Net.Pagination/2.2.2": {
+    "Messaia.Net.Pagination/2.2.3": {
       "type": "project",
       "path": "../../Messaia.Net.Pagination/Messaia.Net.Pagination.csproj",
       "msbuildProject": "../../Messaia.Net.Pagination/Messaia.Net.Pagination.csproj"
     },
-    "Messaia.Net.Repository/2.2.2": {
+    "Messaia.Net.Repository/2.2.3": {
       "type": "project",
       "path": "../../Messaia.Net.Repository/Messaia.Net.Repository.csproj",
       "msbuildProject": "../../Messaia.Net.Repository/Messaia.Net.Repository.csproj"
     },
-    "Messaia.Net.Repository.Impl/2.2.2": {
+    "Messaia.Net.Repository.Impl/2.2.3": {
       "type": "project",
       "path": "../../Messaia.Net.Repository.Impl/Messaia.Net.Repository.Impl.csproj",
       "msbuildProject": "../../Messaia.Net.Repository.Impl/Messaia.Net.Repository.Impl.csproj"
     },
-    "Messaia.Net.Service/2.2.2": {
+    "Messaia.Net.Service/2.2.3": {
       "type": "project",
       "path": "../../Messaia.Net.Service/Messaia.Net.Service.csproj",
       "msbuildProject": "../../Messaia.Net.Service/Messaia.Net.Service.csproj"
     },
-    "Messaia.Net.Service.Impl/2.2.2": {
+    "Messaia.Net.Service.Impl/2.2.3": {
       "type": "project",
       "path": "../../Messaia.Net.Service.Impl/Messaia.Net.Service.Impl.csproj",
       "msbuildProject": "../../Messaia.Net.Service.Impl/Messaia.Net.Service.Impl.csproj"
@@ -5775,11 +5782,11 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "Messaia.Net.Identity >= 2.2.2",
-      "Messaia.Net.MailService >= 2.2.2",
-      "Messaia.Net.Repository.Impl >= 2.2.2",
-      "Messaia.Net.Service.Impl >= 2.2.2",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 2.2.0",
+      "Messaia.Net.Identity >= 2.2.3",
+      "Messaia.Net.MailService >= 2.2.3",
+      "Messaia.Net.Repository.Impl >= 2.2.3",
+      "Messaia.Net.Service.Impl >= 2.2.3",
+      "Microsoft.EntityFrameworkCore.SqlServer >= 2.2.1",
       "Microsoft.Extensions.Configuration >= 2.2.0",
       "Microsoft.Extensions.Configuration.FileExtensions >= 2.2.0",
       "Microsoft.Extensions.Configuration.Json >= 2.2.0",
@@ -5849,7 +5856,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
-            "version": "[2.2.0, )"
+            "version": "[2.2.1, )"
           },
           "Microsoft.Extensions.Configuration": {
             "target": "Package",

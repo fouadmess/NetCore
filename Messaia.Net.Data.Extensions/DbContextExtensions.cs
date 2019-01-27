@@ -8,12 +8,12 @@
 ///-----------------------------------------------------------------
 namespace Microsoft.EntityFrameworkCore
 {
+    using Messaia.Net.Common;
     using Microsoft.EntityFrameworkCore.ChangeTracking;
     using System;
     using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
-    using Messaia.Net.Common;
 
     /// <summary>
     /// DbContextExtensions class.
@@ -25,7 +25,7 @@ namespace Microsoft.EntityFrameworkCore
         /// </summary>
         /// <param name="dbContext"></param>
         /// <param name="entity"></param>
-        public static void AddOrUpdate(this DbContext dbContext, object entity)
+        public static void AddOrUpdate<TEntity>(this DbContext dbContext, TEntity entity) where TEntity : class
         {
             var entry = dbContext.Entry(entity);
             switch (entry.State)
