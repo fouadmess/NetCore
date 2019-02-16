@@ -21,8 +21,9 @@ namespace Messaia.Net.Common
         /// Maps an object to another
         /// </summary>
         /// <typeparam name="TSource"></typeparam>
-        /// <param name="source"></param>
-        public static TDestination Map<TSource, TDestination>(TSource source) where TSource : class, new() where TDestination : class, new()
+        /// <param name="source">The source to map</param>
+        /// <param name="customMapping">Apply custom mapping</param>
+        public static TDestination Map<TSource, TDestination>(TSource source, Action<TSource, TDestination> customMapping = null) where TSource : class, new() where TDestination : class, new()
         {
             if (source == null)
             {
@@ -55,6 +56,9 @@ namespace Messaia.Net.Common
             {
                 typeof(TDestination).GetProperty(aField.Name).SetValue(dest, source.GetType().GetProperty(aField.Name).GetValue(source, null), null);
             }
+
+            /* Apply custom mapping */
+            customMapping?.Invoke(source, dest);
 
             return dest;
         }

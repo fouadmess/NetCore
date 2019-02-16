@@ -26,5 +26,21 @@ namespace System.Collections.Generic
                 action(item);
             }
         }
+        /// <summary>
+        /// Performs the specified action on each element of the IEnumerable<T>
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="enumeration"></param>
+        /// <param name="action"></param>
+
+        public static void ForEach<T>(this IEnumerable<T> enumeration, Action<int, T> action)
+        {
+            int i = 0;
+            foreach (T item in enumeration)
+            {
+                action(i, item);
+                i++;
+            }
+        }
     }
 }
