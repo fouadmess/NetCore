@@ -190,39 +190,32 @@ namespace Messaia.Net.Service.Impl
                 throw new ArgumentNullException(nameof(entity));
             }
 
-            try
+            /* Notify subscribed observers */
+            if (notifyObservers)
             {
-                /* Notify subscribed observers */
-                if (notifyObservers)
-                {
-                    this.Notify(new BeforeCreateCommand<TEntity> { Entity = entity });
-                }
-
-                /* Begins tracking the given entity in the Microsoft.Data.Entity.EntityState.Added state */
-                if (updateOnConflict)
-                {
-                    this.repository.AddOrUpdate(entity);
-                }
-                else
-                {
-                    this.repository.Add(entity);
-                }
-
-                /* Commit the changes */
-                await this.unitOfWork.SaveChangesAsync(cancellationToken);
-
-                /* Notify subscribed observers */
-                if (notifyObservers)
-                {
-                    this.Notify(new AfterCreateCommand<TEntity> { Entity = entity });
-                }
-
-                return ServiceResult.Success;
+                this.Notify(new BeforeCreateCommand<TEntity> { Entity = entity });
             }
-            catch (Exception ex)
+
+            /* Begins tracking the given entity in the Microsoft.Data.Entity.EntityState.Added state */
+            if (updateOnConflict)
             {
-                return ServiceResult.Failed(new ServiceError(nameof(CreateAsync), ex.Message, ex));
+                this.repository.AddOrUpdate(entity);
             }
+            else
+            {
+                this.repository.Add(entity);
+            }
+
+            /* Commit the changes */
+            await this.unitOfWork.SaveChangesAsync(cancellationToken);
+
+            /* Notify subscribed observers */
+            if (notifyObservers)
+            {
+                this.Notify(new AfterCreateCommand<TEntity> { Entity = entity });
+            }
+
+            return ServiceResult.Success;
         }
 
         /// <summary>
@@ -237,25 +230,18 @@ namespace Messaia.Net.Service.Impl
                 throw new ArgumentNullException(nameof(entities));
             }
 
-            try
+            var step = 1000;
+            var count = entities.Count();
+            for (int i = 0; i < count; i += step)
             {
-                var step = 1000;
-                var count = entities.Count();
-                for (int i = 0; i < count; i += step)
-                {
-                    /* Begins tracking the given entity in the Microsoft.Data.Entity.EntityState.Added state */
-                    await this.repository.AddRangeAsync(entities.Skip(i).Take(step).ToArray(), cancellationToken);
+                /* Begins tracking the given entity in the Microsoft.Data.Entity.EntityState.Added state */
+                await this.repository.AddRangeAsync(entities.Skip(i).Take(step).ToArray(), cancellationToken);
 
-                    /* Commit the changes */
-                    await this.unitOfWork.SaveChangesAsync();
-                }
+                /* Commit the changes */
+                await this.unitOfWork.SaveChangesAsync();
+            }
 
-                return ServiceResult.Success;
-            }
-            catch (Exception ex)
-            {
-                return ServiceResult.Failed(new ServiceError(nameof(CreateRangeAsync), ex.Message, ex));
-            }
+            return ServiceResult.Success;
         }
 
         /// <summary>
@@ -279,32 +265,25 @@ namespace Messaia.Net.Service.Impl
                 throw new ArgumentNullException(nameof(entity));
             }
 
-            try
+            /* Begins tracking the given entity in the Microsoft.Data.Entity.EntityState.Modified state */
+            var changes = this.repository.Edit(entity);
+
+            /* Notify subscribed observers */
+            if (notifyObservers)
             {
-                /* Begins tracking the given entity in the Microsoft.Data.Entity.EntityState.Modified state */
-                var changes = this.repository.Edit(entity);
-
-                /* Notify subscribed observers */
-                if (notifyObservers)
-                {
-                    this.Notify(new BeforeUpdateCommand<TEntity> { Entity = entity, Changes = changes });
-                }
-
-                /* Commit the changes */
-                await this.unitOfWork.SaveChangesAsync(cancellationToken);
-
-                /* Notify subscribed observers */
-                if (notifyObservers)
-                {
-                    this.Notify(new AfterUpdateCommand<TEntity> { Entity = entity, Changes = changes });
-                }
-
-                return ServiceResult.Success;
+                this.Notify(new BeforeUpdateCommand<TEntity> { Entity = entity, Changes = changes });
             }
-            catch (Exception ex)
+
+            /* Commit the changes */
+            await this.unitOfWork.SaveChangesAsync(cancellationToken);
+
+            /* Notify subscribed observers */
+            if (notifyObservers)
             {
-                return ServiceResult.Failed(new ServiceError(nameof(UpdateAsync), ex.Message, ex));
+                this.Notify(new AfterUpdateCommand<TEntity> { Entity = entity, Changes = changes });
             }
+
+            return ServiceResult.Success;
         }
 
         /// <summary>
@@ -328,32 +307,25 @@ namespace Messaia.Net.Service.Impl
                 throw new ArgumentNullException(nameof(entity));
             }
 
-            try
+            /* Notify subscribed observers */
+            if (notifyObservers)
             {
-                /* Notify subscribed observers */
-                if (notifyObservers)
-                {
-                    this.Notify(new BeforeDeleteCommand<TEntity> { Entity = entity });
-                }
-
-                /* Begins tracking the given entity in the Microsoft.Data.Entity.EntityState.Modified state */
-                this.repository.Delete(entity);
-
-                /* Commit the changes */
-                await this.unitOfWork.SaveChangesAsync(cancellationToken);
-
-                /* Notify subscribed observers */
-                if (notifyObservers)
-                {
-                    this.Notify(new AfterDeleteCommand<TEntity> { Entity = entity });
-                }
-
-                return ServiceResult.Success;
+                this.Notify(new BeforeDeleteCommand<TEntity> { Entity = entity });
             }
-            catch (Exception ex)
+
+            /* Begins tracking the given entity in the Microsoft.Data.Entity.EntityState.Modified state */
+            this.repository.Delete(entity);
+
+            /* Commit the changes */
+            await this.unitOfWork.SaveChangesAsync(cancellationToken);
+
+            /* Notify subscribed observers */
+            if (notifyObservers)
             {
-                return ServiceResult.Failed(new ServiceError(nameof(DeleteAsync), ex.Message, ex));
+                this.Notify(new AfterDeleteCommand<TEntity> { Entity = entity });
             }
+
+            return ServiceResult.Success;
         }
 
         /// <summary>
@@ -378,32 +350,25 @@ namespace Messaia.Net.Service.Impl
                 return ServiceResult.Failed(new ServiceError(nameof(DeleteAsync), "Entity not found"));
             }
 
-            try
+            /* Notify subscribed observers */
+            if (notifyObservers)
             {
-                /* Notify subscribed observers */
-                if (notifyObservers)
-                {
-                    this.Notify(new BeforeDeleteCommand<TEntity> { Entity = entity });
-                }
-
-                /* Begins tracking the given entity in the Microsoft.Data.Entity.EntityState.Modified state */
-                this.repository.Delete(entity);
-
-                /* Commit the changes */
-                await this.unitOfWork.SaveChangesAsync(cancellationToken);
-
-                /* Notify subscribed observers */
-                if (notifyObservers)
-                {
-                    this.Notify(new AfterDeleteCommand<TEntity> { Entity = entity });
-                }
-
-                return ServiceResult.Success;
+                this.Notify(new BeforeDeleteCommand<TEntity> { Entity = entity });
             }
-            catch (Exception ex)
+
+            /* Begins tracking the given entity in the Microsoft.Data.Entity.EntityState.Modified state */
+            this.repository.Delete(entity);
+
+            /* Commit the changes */
+            await this.unitOfWork.SaveChangesAsync(cancellationToken);
+
+            /* Notify subscribed observers */
+            if (notifyObservers)
             {
-                return ServiceResult.Failed(new ServiceError(nameof(DeleteAsync), ex.Message, ex));
+                this.Notify(new AfterDeleteCommand<TEntity> { Entity = entity });
             }
+
+            return ServiceResult.Success;
         }
 
         #region Helpers
