@@ -1862,7 +1862,7 @@
           "bin/placeholder/Messaia.Net.Repository.dll": {}
         }
       },
-      "Messaia.Net.Repository.Impl/2.2.5": {
+      "Messaia.Net.Repository.Impl/2.2.6": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -5754,7 +5754,7 @@
       "path": "../../Messaia.Net.Repository/Messaia.Net.Repository.csproj",
       "msbuildProject": "../../Messaia.Net.Repository/Messaia.Net.Repository.csproj"
     },
-    "Messaia.Net.Repository.Impl/2.2.5": {
+    "Messaia.Net.Repository.Impl/2.2.6": {
       "type": "project",
       "path": "../../Messaia.Net.Repository.Impl/Messaia.Net.Repository.Impl.csproj",
       "msbuildProject": "../../Messaia.Net.Repository.Impl/Messaia.Net.Repository.Impl.csproj"
@@ -5774,7 +5774,7 @@
     ".NETCoreApp,Version=v2.1": [
       "Messaia.Net.Identity >= 2.2.6",
       "Messaia.Net.MailService >= 2.2.6",
-      "Messaia.Net.Repository.Impl >= 2.2.5",
+      "Messaia.Net.Repository.Impl >= 2.2.6",
       "Messaia.Net.Service.Impl >= 2.2.6",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.2.4",
       "Microsoft.Extensions.Configuration >= 2.2.0",
