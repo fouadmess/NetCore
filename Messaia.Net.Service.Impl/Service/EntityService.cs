@@ -184,38 +184,49 @@ namespace Messaia.Net.Service.Impl
         /// </returns>
         public virtual async Task<ServiceResult> CreateAsync(TEntity entity, bool notifyObservers = true, bool updateOnConflict = false, CancellationToken cancellationToken = default(CancellationToken))
         {
-            /* Check the entity object */
-            if (entity == null)
+            try
             {
-                throw new ArgumentNullException(nameof(entity));
-            }
+                /* Check the entity object */
+                if (entity == null)
+                {
+                    throw new ArgumentNullException(nameof(entity));
+                }
 
-            /* Notify subscribed observers */
-            if (notifyObservers)
+                /* Notify subscribed observers */
+                if (notifyObservers)
+                {
+                    this.Notify(new BeforeCreateCommand<TEntity> { Entity = entity });
+                }
+
+                /* Begins tracking the given entity in the Microsoft.Data.Entity.EntityState.Added state */
+                if (updateOnConflict)
+                {
+                    this.repository.AddOrUpdate(entity);
+                }
+                else
+                {
+                    this.repository.Add(entity);
+                }
+
+                /* Commit the changes */
+                await this.unitOfWork.SaveChangesAsync(cancellationToken);
+
+                /* Notify subscribed observers */
+                if (notifyObservers)
+                {
+                    this.Notify(new AfterCreateCommand<TEntity> { Entity = entity });
+                }
+
+                return ServiceResult.Success;
+            }
+            catch (ServiceException ex)
             {
-                this.Notify(new BeforeCreateCommand<TEntity> { Entity = entity });
+                return ServiceResult.Failed(new ServiceError(nameof(CreateAsync), ex.Message));
             }
-
-            /* Begins tracking the given entity in the Microsoft.Data.Entity.EntityState.Added state */
-            if (updateOnConflict)
+            catch (Exception)
             {
-                this.repository.AddOrUpdate(entity);
+                throw;
             }
-            else
-            {
-                this.repository.Add(entity);
-            }
-
-            /* Commit the changes */
-            await this.unitOfWork.SaveChangesAsync(cancellationToken);
-
-            /* Notify subscribed observers */
-            if (notifyObservers)
-            {
-                this.Notify(new AfterCreateCommand<TEntity> { Entity = entity });
-            }
-
-            return ServiceResult.Success;
         }
 
         /// <summary>
@@ -259,31 +270,42 @@ namespace Messaia.Net.Service.Impl
         /// </returns>
         public virtual async Task<ServiceResult> UpdateAsync(TEntity entity, bool notifyObservers = true, CancellationToken cancellationToken = default(CancellationToken))
         {
-            /* Check the entity object */
-            if (entity == null)
+            try
             {
-                throw new ArgumentNullException(nameof(entity));
+                /* Check the entity object */
+                if (entity == null)
+                {
+                    throw new ArgumentNullException(nameof(entity));
+                }
+
+                /* Begins tracking the given entity in the Microsoft.Data.Entity.EntityState.Modified state */
+                var changes = this.repository.Edit(entity);
+
+                /* Notify subscribed observers */
+                if (notifyObservers)
+                {
+                    this.Notify(new BeforeUpdateCommand<TEntity> { Entity = entity, Changes = changes });
+                }
+
+                /* Commit the changes */
+                await this.unitOfWork.SaveChangesAsync(cancellationToken);
+
+                /* Notify subscribed observers */
+                if (notifyObservers)
+                {
+                    this.Notify(new AfterUpdateCommand<TEntity> { Entity = entity, Changes = changes });
+                }
+
+                return ServiceResult.Success;
             }
-
-            /* Begins tracking the given entity in the Microsoft.Data.Entity.EntityState.Modified state */
-            var changes = this.repository.Edit(entity);
-
-            /* Notify subscribed observers */
-            if (notifyObservers)
+            catch (ServiceException ex)
             {
-                this.Notify(new BeforeUpdateCommand<TEntity> { Entity = entity, Changes = changes });
+                return ServiceResult.Failed(new ServiceError(nameof(CreateAsync), ex.Message));
             }
-
-            /* Commit the changes */
-            await this.unitOfWork.SaveChangesAsync(cancellationToken);
-
-            /* Notify subscribed observers */
-            if (notifyObservers)
+            catch (Exception)
             {
-                this.Notify(new AfterUpdateCommand<TEntity> { Entity = entity, Changes = changes });
+                throw;
             }
-
-            return ServiceResult.Success;
         }
 
         /// <summary>
@@ -301,31 +323,42 @@ namespace Messaia.Net.Service.Impl
         /// </returns>
         public virtual async Task<ServiceResult> DeleteAsync(TEntity entity, bool notifyObservers = true, CancellationToken cancellationToken = default(CancellationToken))
         {
-            /* Check the entity object */
-            if (entity == null)
+            try
             {
-                throw new ArgumentNullException(nameof(entity));
-            }
+                /* Check the entity object */
+                if (entity == null)
+                {
+                    throw new ArgumentNullException(nameof(entity));
+                }
 
-            /* Notify subscribed observers */
-            if (notifyObservers)
+                /* Notify subscribed observers */
+                if (notifyObservers)
+                {
+                    this.Notify(new BeforeDeleteCommand<TEntity> { Entity = entity });
+                }
+
+                /* Begins tracking the given entity in the Microsoft.Data.Entity.EntityState.Modified state */
+                this.repository.Delete(entity);
+
+                /* Commit the changes */
+                await this.unitOfWork.SaveChangesAsync(cancellationToken);
+
+                /* Notify subscribed observers */
+                if (notifyObservers)
+                {
+                    this.Notify(new AfterDeleteCommand<TEntity> { Entity = entity });
+                }
+
+                return ServiceResult.Success;
+            }
+            catch (ServiceException ex)
             {
-                this.Notify(new BeforeDeleteCommand<TEntity> { Entity = entity });
+                return ServiceResult.Failed(new ServiceError(nameof(CreateAsync), ex.Message));
             }
-
-            /* Begins tracking the given entity in the Microsoft.Data.Entity.EntityState.Modified state */
-            this.repository.Delete(entity);
-
-            /* Commit the changes */
-            await this.unitOfWork.SaveChangesAsync(cancellationToken);
-
-            /* Notify subscribed observers */
-            if (notifyObservers)
+            catch (Exception)
             {
-                this.Notify(new AfterDeleteCommand<TEntity> { Entity = entity });
+                throw;
             }
-
-            return ServiceResult.Success;
         }
 
         /// <summary>
@@ -343,32 +376,43 @@ namespace Messaia.Net.Service.Impl
         /// </returns>
         public virtual async Task<ServiceResult> DeleteAsync(Expression<Func<TEntity, bool>> predicate, bool notifyObservers = true, CancellationToken cancellationToken = default(CancellationToken))
         {
-            /* Fetch the entity */
-            var entity = await this.repository.GetAsync(predicate);
-            if (entity == null)
+            try
             {
-                return ServiceResult.Failed(new ServiceError(nameof(DeleteAsync), "Entity not found"));
-            }
+                /* Fetch the entity */
+                var entity = await this.repository.GetAsync(predicate);
+                if (entity == null)
+                {
+                    return ServiceResult.Failed(new ServiceError(nameof(DeleteAsync), "Entity not found"));
+                }
 
-            /* Notify subscribed observers */
-            if (notifyObservers)
+                /* Notify subscribed observers */
+                if (notifyObservers)
+                {
+                    this.Notify(new BeforeDeleteCommand<TEntity> { Entity = entity });
+                }
+
+                /* Begins tracking the given entity in the Microsoft.Data.Entity.EntityState.Modified state */
+                this.repository.Delete(entity);
+
+                /* Commit the changes */
+                await this.unitOfWork.SaveChangesAsync(cancellationToken);
+
+                /* Notify subscribed observers */
+                if (notifyObservers)
+                {
+                    this.Notify(new AfterDeleteCommand<TEntity> { Entity = entity });
+                }
+
+                return ServiceResult.Success;
+            }
+            catch (ServiceException ex)
             {
-                this.Notify(new BeforeDeleteCommand<TEntity> { Entity = entity });
+                return ServiceResult.Failed(new ServiceError(nameof(CreateAsync), ex.Message));
             }
-
-            /* Begins tracking the given entity in the Microsoft.Data.Entity.EntityState.Modified state */
-            this.repository.Delete(entity);
-
-            /* Commit the changes */
-            await this.unitOfWork.SaveChangesAsync(cancellationToken);
-
-            /* Notify subscribed observers */
-            if (notifyObservers)
+            catch (Exception)
             {
-                this.Notify(new AfterDeleteCommand<TEntity> { Entity = entity });
+                throw;
             }
-
-            return ServiceResult.Success;
         }
 
         #region Helpers
