@@ -48,6 +48,11 @@ namespace Messaia.Net.Repository.Impl
         public virtual SortOrder? SortOrder { get; set; }
 
         /// <summary>
+        /// Gets or sets the Limit
+        /// </summary>
+        public virtual int? Limit { get; set; }
+
+        /// <summary>
         /// Gets or sets the Predicate
         /// </summary>
         public virtual Expression<Func<TEntity, bool>> Predicate { get; set; } = PredicateBuilder.True<TEntity>();
@@ -81,6 +86,12 @@ namespace Messaia.Net.Repository.Impl
             if (this.Ids != null)
             {
                 query = query.Where(x => this.Ids.Contains(x.Id));
+            }
+
+            /* Add limit */
+            if (this.Limit.GetValueOrDefault() > 0)
+            {
+                query = query.Take(this.Limit.GetValueOrDefault());
             }
 
             return query;
