@@ -1733,7 +1733,7 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
-      "Messaia.Net.Common/2.2.9": {
+      "Messaia.Net.Common/2.2.10": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
@@ -1743,7 +1743,7 @@
           "bin/placeholder/Messaia.Net.Common.dll": {}
         }
       },
-      "Messaia.Net.Data/2.2.9": {
+      "Messaia.Net.Data/2.2.10": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
@@ -1753,11 +1753,11 @@
           "bin/placeholder/Messaia.Net.Data.dll": {}
         }
       },
-      "Messaia.Net.Data.Extensions/2.2.9": {
+      "Messaia.Net.Data.Extensions/2.2.10": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Messaia.Net.Common": "2.2.9",
+          "Messaia.Net.Common": "2.2.10",
           "Microsoft.EntityFrameworkCore": "2.2.4"
         },
         "compile": {
@@ -1767,12 +1767,12 @@
           "bin/placeholder/Messaia.Net.Data.Extensions.dll": {}
         }
       },
-      "Messaia.Net.Identity/2.2.9": {
+      "Messaia.Net.Identity/2.2.10": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Messaia.Net.Data": "2.2.9",
-          "Messaia.Net.Model": "2.2.9",
+          "Messaia.Net.Data": "2.2.10",
+          "Messaia.Net.Model": "2.2.10",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
           "Microsoft.Extensions.Configuration.Binder": "2.2.4"
         },
@@ -1783,7 +1783,7 @@
           "bin/placeholder/Messaia.Net.Identity.dll": {}
         }
       },
-      "Messaia.Net.MailService/2.2.9": {
+      "Messaia.Net.MailService/2.2.10": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -1797,7 +1797,7 @@
           "bin/placeholder/Messaia.Net.MailService.dll": {}
         }
       },
-      "Messaia.Net.Model/2.2.9": {
+      "Messaia.Net.Model/2.2.10": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -1810,11 +1810,11 @@
           "bin/placeholder/Messaia.Net.Model.dll": {}
         }
       },
-      "Messaia.Net.Observable/2.2.9": {
+      "Messaia.Net.Observable/2.2.10": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Messaia.Net.Common": "2.2.9"
+          "Messaia.Net.Common": "2.2.10"
         },
         "compile": {
           "bin/placeholder/Messaia.Net.Observable.dll": {}
@@ -1823,12 +1823,12 @@
           "bin/placeholder/Messaia.Net.Observable.dll": {}
         }
       },
-      "Messaia.Net.Observable.Impl/2.2.9": {
+      "Messaia.Net.Observable.Impl/2.2.10": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Messaia.Net.Common": "2.2.9",
-          "Messaia.Net.Observable": "2.2.9"
+          "Messaia.Net.Common": "2.2.10",
+          "Messaia.Net.Observable": "2.2.10"
         },
         "compile": {
           "bin/placeholder/Messaia.Net.Observable.Impl.dll": {}
@@ -1837,7 +1837,7 @@
           "bin/placeholder/Messaia.Net.Observable.Impl.dll": {}
         }
       },
-      "Messaia.Net.Pagination/2.2.9": {
+      "Messaia.Net.Pagination/2.2.10": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
@@ -1847,13 +1847,13 @@
           "bin/placeholder/Messaia.Net.Pagination.dll": {}
         }
       },
-      "Messaia.Net.Repository/2.2.9": {
+      "Messaia.Net.Repository/2.2.10": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Messaia.Net.Common": "2.2.9",
-          "Messaia.Net.Observable": "2.2.9",
-          "Messaia.Net.Pagination": "2.2.9"
+          "Messaia.Net.Common": "2.2.10",
+          "Messaia.Net.Observable": "2.2.10",
+          "Messaia.Net.Pagination": "2.2.10"
         },
         "compile": {
           "bin/placeholder/Messaia.Net.Repository.dll": {}
@@ -1862,15 +1862,15 @@
           "bin/placeholder/Messaia.Net.Repository.dll": {}
         }
       },
-      "Messaia.Net.Repository.Impl/2.2.9": {
+      "Messaia.Net.Repository.Impl/2.2.10": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Messaia.Net.Data": "2.2.9",
-          "Messaia.Net.Data.Extensions": "2.2.9",
-          "Messaia.Net.Model": "2.2.9",
-          "Messaia.Net.Observable.Impl": "2.2.9",
-          "Messaia.Net.Repository": "2.2.9",
+          "Messaia.Net.Data": "2.2.10",
+          "Messaia.Net.Data.Extensions": "2.2.10",
+          "Messaia.Net.Model": "2.2.10",
+          "Messaia.Net.Observable.Impl": "2.2.10",
+          "Messaia.Net.Repository": "2.2.10",
           "Microsoft.EntityFrameworkCore": "2.2.4",
           "Microsoft.EntityFrameworkCore.Relational": "2.2.4",
           "System.Linq.Dynamic.Core": "1.0.13"
@@ -1882,12 +1882,12 @@
           "bin/placeholder/Messaia.Net.Repository.Impl.dll": {}
         }
       },
-      "Messaia.Net.Service/2.2.9": {
+      "Messaia.Net.Service/2.2.10": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Messaia.Net.Model": "2.2.9",
-          "Messaia.Net.Repository": "2.2.9"
+          "Messaia.Net.Model": "2.2.10",
+          "Messaia.Net.Repository": "2.2.10"
         },
         "compile": {
           "bin/placeholder/Messaia.Net.Service.dll": {}
@@ -1896,13 +1896,13 @@
           "bin/placeholder/Messaia.Net.Service.dll": {}
         }
       },
-      "Messaia.Net.Service.Impl/2.2.9": {
+      "Messaia.Net.Service.Impl/2.2.10": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Messaia.Net.Common": "2.2.9",
-          "Messaia.Net.Observable.Impl": "2.2.9",
-          "Messaia.Net.Service": "2.2.9"
+          "Messaia.Net.Common": "2.2.10",
+          "Messaia.Net.Observable.Impl": "2.2.10",
+          "Messaia.Net.Service": "2.2.10"
         },
         "compile": {
           "bin/placeholder/Messaia.Net.Service.Impl.dll": {}
@@ -5704,67 +5704,67 @@
         "version.txt"
       ]
     },
-    "Messaia.Net.Common/2.2.9": {
+    "Messaia.Net.Common/2.2.10": {
       "type": "project",
       "path": "../../Messaia.Net.Common/Messaia.Net.Common.csproj",
       "msbuildProject": "../../Messaia.Net.Common/Messaia.Net.Common.csproj"
     },
-    "Messaia.Net.Data/2.2.9": {
+    "Messaia.Net.Data/2.2.10": {
       "type": "project",
       "path": "../../Messaia.Net.Data/Messaia.Net.Data.csproj",
       "msbuildProject": "../../Messaia.Net.Data/Messaia.Net.Data.csproj"
     },
-    "Messaia.Net.Data.Extensions/2.2.9": {
+    "Messaia.Net.Data.Extensions/2.2.10": {
       "type": "project",
       "path": "../../Messaia.Net.Data.Extensions/Messaia.Net.Data.Extensions.csproj",
       "msbuildProject": "../../Messaia.Net.Data.Extensions/Messaia.Net.Data.Extensions.csproj"
     },
-    "Messaia.Net.Identity/2.2.9": {
+    "Messaia.Net.Identity/2.2.10": {
       "type": "project",
       "path": "../../Messaia.Net.Identity/Messaia.Net.Identity.csproj",
       "msbuildProject": "../../Messaia.Net.Identity/Messaia.Net.Identity.csproj"
     },
-    "Messaia.Net.MailService/2.2.9": {
+    "Messaia.Net.MailService/2.2.10": {
       "type": "project",
       "path": "../../Messaia.Net.MailService/Messaia.Net.MailService.csproj",
       "msbuildProject": "../../Messaia.Net.MailService/Messaia.Net.MailService.csproj"
     },
-    "Messaia.Net.Model/2.2.9": {
+    "Messaia.Net.Model/2.2.10": {
       "type": "project",
       "path": "../../Messaia.Net.Model/Messaia.Net.Model.csproj",
       "msbuildProject": "../../Messaia.Net.Model/Messaia.Net.Model.csproj"
     },
-    "Messaia.Net.Observable/2.2.9": {
+    "Messaia.Net.Observable/2.2.10": {
       "type": "project",
       "path": "../../Messaia.Net.Observable/Messaia.Net.Observable.csproj",
       "msbuildProject": "../../Messaia.Net.Observable/Messaia.Net.Observable.csproj"
     },
-    "Messaia.Net.Observable.Impl/2.2.9": {
+    "Messaia.Net.Observable.Impl/2.2.10": {
       "type": "project",
       "path": "../../Messaia.Net.Observable.Impl/Messaia.Net.Observable.Impl.csproj",
       "msbuildProject": "../../Messaia.Net.Observable.Impl/Messaia.Net.Observable.Impl.csproj"
     },
-    "Messaia.Net.Pagination/2.2.9": {
+    "Messaia.Net.Pagination/2.2.10": {
       "type": "project",
       "path": "../../Messaia.Net.Pagination/Messaia.Net.Pagination.csproj",
       "msbuildProject": "../../Messaia.Net.Pagination/Messaia.Net.Pagination.csproj"
     },
-    "Messaia.Net.Repository/2.2.9": {
+    "Messaia.Net.Repository/2.2.10": {
       "type": "project",
       "path": "../../Messaia.Net.Repository/Messaia.Net.Repository.csproj",
       "msbuildProject": "../../Messaia.Net.Repository/Messaia.Net.Repository.csproj"
     },
-    "Messaia.Net.Repository.Impl/2.2.9": {
+    "Messaia.Net.Repository.Impl/2.2.10": {
       "type": "project",
       "path": "../../Messaia.Net.Repository.Impl/Messaia.Net.Repository.Impl.csproj",
       "msbuildProject": "../../Messaia.Net.Repository.Impl/Messaia.Net.Repository.Impl.csproj"
     },
-    "Messaia.Net.Service/2.2.9": {
+    "Messaia.Net.Service/2.2.10": {
       "type": "project",
       "path": "../../Messaia.Net.Service/Messaia.Net.Service.csproj",
       "msbuildProject": "../../Messaia.Net.Service/Messaia.Net.Service.csproj"
     },
-    "Messaia.Net.Service.Impl/2.2.9": {
+    "Messaia.Net.Service.Impl/2.2.10": {
       "type": "project",
       "path": "../../Messaia.Net.Service.Impl/Messaia.Net.Service.Impl.csproj",
       "msbuildProject": "../../Messaia.Net.Service.Impl/Messaia.Net.Service.Impl.csproj"
@@ -5772,10 +5772,10 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "Messaia.Net.Identity >= 2.2.9",
-      "Messaia.Net.MailService >= 2.2.9",
-      "Messaia.Net.Repository.Impl >= 2.2.9",
-      "Messaia.Net.Service.Impl >= 2.2.9",
+      "Messaia.Net.Identity >= 2.2.10",
+      "Messaia.Net.MailService >= 2.2.10",
+      "Messaia.Net.Repository.Impl >= 2.2.10",
+      "Messaia.Net.Service.Impl >= 2.2.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.2.4",
       "Microsoft.Extensions.Configuration >= 2.2.0",
       "Microsoft.Extensions.Configuration.FileExtensions >= 2.2.0",

@@ -212,7 +212,7 @@ namespace Messaia.Net.Api
         public virtual async Task<IActionResult> Patch(int id, [FromBody]JsonPatchDocument<TEntityViewModel> patchedViewModel)
         {
             /* Load the entity and check if it exists */
-            var entity = await this.Service.GetAsync(x => x.Id == id, true, this.trackableSingle);
+            var entity = await this.Service.GetAsync(x => x.Id == id);
             if (entity == null)
             {
                 this.logger.LogWarning(LoggingEvents.GetItemNotFound, "Update({ID}) NOT FOUND", id);
