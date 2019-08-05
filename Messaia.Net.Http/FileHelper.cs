@@ -44,8 +44,9 @@ namespace Messaia.Net.Http
         /// </summary>
         /// <param name="folder">The name of the sub folder</param>
         /// <param name="allowedExtensions">Allowed sxtensions</param>
+        /// <param name="preserveOriginalName">If true preserve the file original name</param>
         /// <returns></returns>
-        public static List<UploadDetail> Upload(string folder, params string[] allowedExtensions)
+        public static List<UploadDetail> Upload(string folder, string[] allowedExtensions, bool preserveOriginalName = false)
         {
             var filesUploaded = new List<UploadDetail>();
 
@@ -72,7 +73,7 @@ namespace Messaia.Net.Http
                 }
 
                 /* Combine the file path */
-                var newFileName = string.Format("{0}{1}", Guid.NewGuid().ToString(), fileExtension);
+                var newFileName = preserveOriginalName ? file.FileName : string.Format("{0}{1}", Guid.NewGuid().ToString(), fileExtension);
                 var relativeFilePath = Path.Combine(BasePath ?? string.Empty, folder);
                 var filePath = Path.Combine(relativeFilePath, newFileName);
 

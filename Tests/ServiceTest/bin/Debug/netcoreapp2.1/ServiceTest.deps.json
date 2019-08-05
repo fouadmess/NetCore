@@ -8,12 +8,12 @@
     ".NETCoreApp,Version=v2.1": {
       "ServiceTest/1.0.0": {
         "dependencies": {
-          "Messaia.Net.Data": "2.2.11",
-          "Messaia.Net.Data.Extensions": "2.2.11",
-          "Messaia.Net.Http.Util": "2.2.11",
-          "Messaia.Net.Model": "2.2.11",
-          "Messaia.Net.Repository.Impl": "2.2.11",
-          "Messaia.Net.Service.Impl": "2.2.11",
+          "Messaia.Net.Data": "2.2.12",
+          "Messaia.Net.Data.Extensions": "2.2.12",
+          "Messaia.Net.Http.Util": "2.2.12",
+          "Messaia.Net.Model": "2.2.12",
+          "Messaia.Net.Repository.Impl": "2.2.12",
+          "Messaia.Net.Service.Impl": "2.2.12",
           "Microsoft.EntityFrameworkCore": "2.2.4",
           "Microsoft.Extensions.Configuration": "2.2.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "2.2.0",
@@ -888,26 +888,26 @@
       },
       "System.Threading.Tasks.Extensions/4.5.1": {},
       "System.ValueTuple/4.5.0": {},
-      "Messaia.Net.Common/2.2.11": {
+      "Messaia.Net.Common/2.2.12": {
         "runtime": {
           "Messaia.Net.Common.dll": {}
         }
       },
-      "Messaia.Net.Data/2.2.11": {
+      "Messaia.Net.Data/2.2.12": {
         "runtime": {
           "Messaia.Net.Data.dll": {}
         }
       },
-      "Messaia.Net.Data.Extensions/2.2.11": {
+      "Messaia.Net.Data.Extensions/2.2.12": {
         "dependencies": {
-          "Messaia.Net.Common": "2.2.11",
+          "Messaia.Net.Common": "2.2.12",
           "Microsoft.EntityFrameworkCore": "2.2.4"
         },
         "runtime": {
           "Messaia.Net.Data.Extensions.dll": {}
         }
       },
-      "Messaia.Net.Http.Util/2.2.11": {
+      "Messaia.Net.Http.Util/2.2.12": {
         "dependencies": {
           "IdentityModel": "3.10.10"
         },
@@ -915,7 +915,7 @@
           "Messaia.Net.Http.Util.dll": {}
         }
       },
-      "Messaia.Net.Model/2.2.11": {
+      "Messaia.Net.Model/2.2.12": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.DataAnnotations": "2.2.0"
         },
@@ -923,45 +923,45 @@
           "Messaia.Net.Model.dll": {}
         }
       },
-      "Messaia.Net.Observable/2.2.11": {
+      "Messaia.Net.Observable/2.2.12": {
         "dependencies": {
-          "Messaia.Net.Common": "2.2.11"
+          "Messaia.Net.Common": "2.2.12"
         },
         "runtime": {
           "Messaia.Net.Observable.dll": {}
         }
       },
-      "Messaia.Net.Observable.Impl/2.2.11": {
+      "Messaia.Net.Observable.Impl/2.2.12": {
         "dependencies": {
-          "Messaia.Net.Common": "2.2.11",
-          "Messaia.Net.Observable": "2.2.11"
+          "Messaia.Net.Common": "2.2.12",
+          "Messaia.Net.Observable": "2.2.12"
         },
         "runtime": {
           "Messaia.Net.Observable.Impl.dll": {}
         }
       },
-      "Messaia.Net.Pagination/2.2.11": {
+      "Messaia.Net.Pagination/2.2.12": {
         "runtime": {
           "Messaia.Net.Pagination.dll": {}
         }
       },
-      "Messaia.Net.Repository/2.2.11": {
+      "Messaia.Net.Repository/2.2.12": {
         "dependencies": {
-          "Messaia.Net.Common": "2.2.11",
-          "Messaia.Net.Observable": "2.2.11",
-          "Messaia.Net.Pagination": "2.2.11"
+          "Messaia.Net.Common": "2.2.12",
+          "Messaia.Net.Observable": "2.2.12",
+          "Messaia.Net.Pagination": "2.2.12"
         },
         "runtime": {
           "Messaia.Net.Repository.dll": {}
         }
       },
-      "Messaia.Net.Repository.Impl/2.2.11": {
+      "Messaia.Net.Repository.Impl/2.2.12": {
         "dependencies": {
-          "Messaia.Net.Data": "2.2.11",
-          "Messaia.Net.Data.Extensions": "2.2.11",
-          "Messaia.Net.Model": "2.2.11",
-          "Messaia.Net.Observable.Impl": "2.2.11",
-          "Messaia.Net.Repository": "2.2.11",
+          "Messaia.Net.Data": "2.2.12",
+          "Messaia.Net.Data.Extensions": "2.2.12",
+          "Messaia.Net.Model": "2.2.12",
+          "Messaia.Net.Observable.Impl": "2.2.12",
+          "Messaia.Net.Repository": "2.2.12",
           "Microsoft.EntityFrameworkCore": "2.2.4",
           "Microsoft.EntityFrameworkCore.Relational": "2.2.4",
           "System.Linq.Dynamic.Core": "1.0.13"
@@ -970,20 +970,20 @@
           "Messaia.Net.Repository.Impl.dll": {}
         }
       },
-      "Messaia.Net.Service/2.2.11": {
+      "Messaia.Net.Service/2.2.12": {
         "dependencies": {
-          "Messaia.Net.Model": "2.2.11",
-          "Messaia.Net.Repository": "2.2.11"
+          "Messaia.Net.Model": "2.2.12",
+          "Messaia.Net.Repository": "2.2.12"
         },
         "runtime": {
           "Messaia.Net.Service.dll": {}
         }
       },
-      "Messaia.Net.Service.Impl/2.2.11": {
+      "Messaia.Net.Service.Impl/2.2.12": {
         "dependencies": {
-          "Messaia.Net.Common": "2.2.11",
-          "Messaia.Net.Observable.Impl": "2.2.11",
-          "Messaia.Net.Service": "2.2.11"
+          "Messaia.Net.Common": "2.2.12",
+          "Messaia.Net.Observable.Impl": "2.2.12",
+          "Messaia.Net.Service": "2.2.12"
         },
         "runtime": {
           "Messaia.Net.Service.Impl.dll": {}
@@ -1620,62 +1620,62 @@
       "path": "system.valuetuple/4.5.0",
       "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
     },
-    "Messaia.Net.Common/2.2.11": {
+    "Messaia.Net.Common/2.2.12": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Messaia.Net.Data/2.2.11": {
+    "Messaia.Net.Data/2.2.12": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Messaia.Net.Data.Extensions/2.2.11": {
+    "Messaia.Net.Data.Extensions/2.2.12": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Messaia.Net.Http.Util/2.2.11": {
+    "Messaia.Net.Http.Util/2.2.12": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Messaia.Net.Model/2.2.11": {
+    "Messaia.Net.Model/2.2.12": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Messaia.Net.Observable/2.2.11": {
+    "Messaia.Net.Observable/2.2.12": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Messaia.Net.Observable.Impl/2.2.11": {
+    "Messaia.Net.Observable.Impl/2.2.12": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Messaia.Net.Pagination/2.2.11": {
+    "Messaia.Net.Pagination/2.2.12": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Messaia.Net.Repository/2.2.11": {
+    "Messaia.Net.Repository/2.2.12": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Messaia.Net.Repository.Impl/2.2.11": {
+    "Messaia.Net.Repository.Impl/2.2.12": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Messaia.Net.Service/2.2.11": {
+    "Messaia.Net.Service/2.2.12": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Messaia.Net.Service.Impl/2.2.11": {
+    "Messaia.Net.Service.Impl/2.2.12": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

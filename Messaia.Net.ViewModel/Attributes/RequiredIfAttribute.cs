@@ -117,8 +117,8 @@ namespace Messaia.Net.ViewModel
                 throw new ArgumentNullException(nameof(context));
             }
 
-            this.MergeAttribute(context.Attributes, "data-val", "false");
-            this.MergeAttribute(context.Attributes, "data-val-required", GetErrorMessage(context));
+            this.MergeAttribute(context.Attributes, "data-val", "true");
+            this.MergeAttribute(context.Attributes, "data-val-required-if", this.GetErrorMessage(context));
         }
 
         /// <summary>
