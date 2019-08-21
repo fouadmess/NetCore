@@ -25,6 +25,11 @@ namespace Messaia.Net.Model
         public virtual Salutation Salutation { get; set; }
 
         /// <summary>
+        /// Gets or sets the Title
+        /// </summary>
+        public string Title { get; set; }
+
+        /// <summary>
         /// Gets or sets the FirstName
         /// </summary>
         public virtual string FirstName { get; set; }
