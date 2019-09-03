@@ -69,7 +69,10 @@ namespace Microsoft.EntityFrameworkCore
                 {
                     try
                     {
-                        changedProperties.AddRange(entry.Entity.GetChangedProperties(entry.GetDatabaseValues().ToObject(), trackedTypes));
+                        var databaseValues = entry.GetDatabaseValues();
+                        var varianceList = entry.Entity.GetChangedProperties(databaseValues.ToObject(), trackedTypes);
+                        varianceList.ForEach(x => x.NavigationName = databaseValues.EntityType?.DefiningNavigationName);
+                        changedProperties.AddRange(varianceList);
                     }
                     catch (Exception) { }
                 });
@@ -93,7 +96,10 @@ namespace Microsoft.EntityFrameworkCore
             {
                 try
                 {
-                    changedProperties.AddRange(entry.Item1.GetChangedProperties(entry.Item2.GetDatabaseValues().ToObject(), trackedTypes));
+                    var databaseValues = entry.Item2.GetDatabaseValues();
+                    var varianceList = entry.Item1.GetChangedProperties(databaseValues.ToObject(), trackedTypes);
+                    varianceList.ForEach(x => x.NavigationName = databaseValues.EntityType?.DefiningNavigationName);
+                    changedProperties.AddRange(varianceList);
                 }
                 catch (Exception) { }
             });
