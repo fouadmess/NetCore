@@ -653,11 +653,13 @@ namespace Messaia.Net.Repository.Impl
                 throw new ArgumentNullException(nameof(entity));
             }
 
+            /* Track changed properties */
+            var changedPropperties = this.dbContext.GetChangedValues();
+
             /* Begins tracking the given entity in the <see cref="EntityState.Modified"/> */
             this.dbContext.Update(entity);
 
-            /* Track changed properties */
-            return this.dbContext.GetChangedValues();
+            return changedPropperties;
         }
 
         /// <summary>

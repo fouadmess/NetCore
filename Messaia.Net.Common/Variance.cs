@@ -26,6 +26,11 @@ namespace Messaia.Net.Common
         public Type ObjectType { get; set; }
 
         /// <summary>
+        /// Gets or sets the PropertyType
+        /// </summary>
+        public Type PropertyType { get; set; }
+
+        /// <summary>
         /// Gets or sets the NavigationName
         /// </summary>
         public string NavigationName { get; set; }

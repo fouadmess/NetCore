@@ -10,6 +10,7 @@ namespace Microsoft.EntityFrameworkCore
 {
     using Messaia.Net.Common;
     using Microsoft.EntityFrameworkCore.ChangeTracking;
+    using Microsoft.EntityFrameworkCore.Metadata;
     using System;
     using System.Collections;
     using System.Collections.Generic;
@@ -67,18 +68,21 @@ namespace Microsoft.EntityFrameworkCore
                 .ToList()
                 .ForEach(entry =>
                 {
-                    try
+                    changedProperties.AddRange(entry.Properties.Where(x => x.IsModified).Select(x => new Variance
                     {
-                        var databaseValues = entry.GetDatabaseValues();
-                        var varianceList = entry.Entity.GetChangedProperties(databaseValues.ToObject(), trackedTypes);
-                        varianceList.ForEach(x => x.NavigationName = databaseValues.EntityType?.DefiningNavigationName);
-                        changedProperties.AddRange(varianceList);
-                    }
-                    catch (Exception) { }
+                        Object = entry.Entity,
+                        ObjectType = entry.Entity.GetType(),
+                        PropertyName = x.Metadata.Name,
+                        PropertyType = x.Metadata.ClrType,
+                        NavigationName = x.Metadata.DeclaringEntityType.GetDefiningNavigationName(),
+                        OriginalValue = x.OriginalValue,
+                        CurrentValue = x.CurrentValue
+                    }));
                 });
 
             return changedProperties;
         }
+
 
         /// <summary>
         /// Gets changed values after an update operation
@@ -96,10 +100,16 @@ namespace Microsoft.EntityFrameworkCore
             {
                 try
                 {
-                    var databaseValues = entry.Item2.GetDatabaseValues();
-                    var varianceList = entry.Item1.GetChangedProperties(databaseValues.ToObject(), trackedTypes);
-                    varianceList.ForEach(x => x.NavigationName = databaseValues.EntityType?.DefiningNavigationName);
-                    changedProperties.AddRange(varianceList);
+                    changedProperties.AddRange(entry.Item2.Properties.Where(x => x.IsModified).Select(x => new Variance
+                    {
+                        Object = entry.Item2.Entity,
+                        ObjectType = entry.Item2.Entity.GetType(),
+                        PropertyName = x.Metadata.Name,
+                        PropertyType = x.Metadata.ClrType,
+                        NavigationName = x.Metadata.DeclaringEntityType.GetDefiningNavigationName(),
+                        OriginalValue = x.OriginalValue,
+                        CurrentValue = x.CurrentValue
+                    }));
                 }
                 catch (Exception) { }
             });
