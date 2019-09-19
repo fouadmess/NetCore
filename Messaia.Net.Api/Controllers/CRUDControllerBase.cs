@@ -17,6 +17,8 @@ namespace Messaia.Net.Api
     using Messaia.Net.Model;
     using Messaia.Net.Observable;
     using Messaia.Net.Service;
+    using System.Linq;
+    using System.Collections.Generic;
 
     /// <summary>
     /// The CRUDController class
@@ -48,6 +50,11 @@ namespace Messaia.Net.Api
         /// Gets or sets the Service
         /// </summary>
         public TService Service { get; private set; }
+
+        /// <summary>
+        /// Gets or sets the PatchForbiddenPaths
+        /// </summary>
+        protected List<string> PatchForbiddenPaths { get; set; } = new List<string>();
 
         #endregion
 
@@ -211,6 +218,12 @@ namespace Messaia.Net.Api
         [HttpPatch("{id:int}")]
         public virtual async Task<IActionResult> Patch(int id, [FromBody]JsonPatchDocument<TEntityViewModel> patchedViewModel)
         {
+            /* Check if the user is allowed to perform this action */
+            if (patchedViewModel.Operations.Any(x => this.PatchForbiddenPaths?.Any(y => y.ToLower().Equals(x.path.ToLower())) == true))
+            {
+                return BadRequest(new { Message = "You are not authorized to perform this action!" });
+            }
+
             /* Load the entity and check if it exists */
             var entity = await this.Service.GetAsync(x => x.Id == id);
             if (entity == null)

@@ -31,7 +31,7 @@ namespace ServiceTest
             //var provider = services.BuildServiceProvider();
 
             var opt = new DbContextOptionsBuilder<AppDbContext>();
-            opt.UseNpgsql("Server=localhost;User Id=postgres;Password=FouadM@1984;Database=EFCore_MN_Test3;");
+            opt.UseNpgsql("Server=localhost;User Id=postgres;Password=;Database=");
 
             return new AppDbContext(opt.Options);
         }

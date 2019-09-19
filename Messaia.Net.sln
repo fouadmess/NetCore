@@ -59,6 +59,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Messaia.Net.QuartzExtension
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Messaia.Net.iTextExtensions", "Messaia.Net.iTextExtensions\Messaia.Net.iTextExtensions.csproj", "{64239EA7-8C82-488C-92C5-8945326F471A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiTest", "Tests\ApiTest\ApiTest.csproj", "{C55ACFA0-2DB8-4D1C-8B55-DF0691DD509D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -157,6 +159,10 @@ Global
 		{64239EA7-8C82-488C-92C5-8945326F471A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64239EA7-8C82-488C-92C5-8945326F471A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64239EA7-8C82-488C-92C5-8945326F471A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C55ACFA0-2DB8-4D1C-8B55-DF0691DD509D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C55ACFA0-2DB8-4D1C-8B55-DF0691DD509D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C55ACFA0-2DB8-4D1C-8B55-DF0691DD509D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C55ACFA0-2DB8-4D1C-8B55-DF0691DD509D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -164,6 +170,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{137DB9AA-C4D8-47E6-AFAA-4E8D63F30569} = {38B9ADED-8FE4-424A-B545-AB85E3841693}
 		{CE3A7966-6071-44C6-AC11-94C4338B5C56} = {38B9ADED-8FE4-424A-B545-AB85E3841693}
+		{C55ACFA0-2DB8-4D1C-8B55-DF0691DD509D} = {38B9ADED-8FE4-424A-B545-AB85E3841693}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8F0D9C44-4F9E-45B6-8CB8-3A5B86E510B4}
