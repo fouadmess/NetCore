@@ -56,6 +56,11 @@ namespace Messaia.Net.Api
         /// </summary>
         protected List<string> PatchForbiddenPaths { get; set; } = new List<string>();
 
+        /// <summary>
+        /// Gets or sets the PatchAllowedPaths
+        /// </summary>
+        protected List<string> PatchAllowedPaths { get; set; } = new List<string>();
+
         #endregion
 
         #region Constructors
@@ -220,6 +225,12 @@ namespace Messaia.Net.Api
         {
             /* Check if the user is allowed to perform this action */
             if (patchedViewModel.Operations.Any(x => this.PatchForbiddenPaths?.Any(y => y.ToLower().Equals(x.path.ToLower())) == true))
+            {
+                return BadRequest(new { Message = "You are not authorized to perform this action!" });
+            }
+
+            /* Check if the user is allowed to perform this action */
+            if (this.PatchAllowedPaths?.Count > 0 && !patchedViewModel.Operations.All(x => this.PatchAllowedPaths.Any(y => y.ToLower().Equals(x.path.ToLower()))))
             {
                 return BadRequest(new { Message = "You are not authorized to perform this action!" });
             }

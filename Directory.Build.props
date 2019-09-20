@@ -4,9 +4,9 @@
     <Company>MESSAIA.NET</Company>
     <Authors>Fouad Messaia</Authors>
     <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
-    <Version>2.2.17</Version>
-    <AssemblyVersion>2.2.17.0</AssemblyVersion>
-    <FileVersion>2.2.17.0</FileVersion>
+    <Version>2.2.18</Version>
+    <AssemblyVersion>2.2.18.0</AssemblyVersion>
+    <FileVersion>2.2.18.0</FileVersion>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <IncludeSymbols>True</IncludeSymbols>
   </PropertyGroup>
