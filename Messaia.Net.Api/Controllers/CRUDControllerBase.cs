@@ -157,7 +157,7 @@ namespace Messaia.Net.Api
             /* Write some logs */
             this.logger.LogInformation(LoggingEvents.InsertItem, "Item {ID} Created", entity.Id);
 
-            return CreatedAtRoute(new { id = entity.Id }, entity);
+            return CreatedAtRoute(new { id = entity.Id }, viewModel);
         }
 
         /// <summary>
